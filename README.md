@@ -1,3 +1,5 @@
+Still TO-DO: (basically everything as project just started)
+
 * Add a fully functioning physics simulation loader menu background
 - This includes the following simulations:
 - An elasticity & friction simulator
