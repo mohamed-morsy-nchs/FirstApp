@@ -41,7 +41,7 @@ class App:
         
         
         self.root.geometry(str(screen_width) + 'x' + str(screen_height))
-        self.root.title("FirstApp")
+        self.root.title("OMorse Tools v0.0.2")
         
         # Add to debug mode method
         # print(str(screen_width) + "x" + str(screen_height))
@@ -57,8 +57,8 @@ class App:
         
         
         # Setting the icon in the top right corner
-        icon_path = 'FirstApplication\\images\\dice_icon.jpg'
-        icon_path_ico = 'FirstApplication\\images\\dice_icon.ico'
+        icon_path = 'FirstApplication\\images\\o_morse_logo_rounded.png'
+        icon_path_ico = 'FirstApplication\\images\\o_morse_logo_rounded.ico'
         icon = Image.open(icon_path)
         photo = ImageTk.PhotoImage(icon)
         self.root.wm_iconphoto(False, photo)
