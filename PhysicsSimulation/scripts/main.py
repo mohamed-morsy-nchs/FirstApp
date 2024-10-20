@@ -3,13 +3,28 @@ import ctypes
 from tkinter import ttk
 from PIL import Image, ImageTk
 from tkinter import Menu
+from tkinter.font import Font
 from setup import Setup
 from simulation import Simulation
+import os
+import pygame
 
 class App:
     def __init__(self):
         # Initializing the main window
+        pygame.init()
         self.root = tk.Tk()
+        
+        # global attributes
+        global global_font
+        # global_font = ('arial', 30)
+        font_name = os.path.basename('fonts\\baloo_paj\\Baloo_Paaji_2\\static\\BalooPaaji2-Bold.ttf')
+       
+        global_font = pygame.font.Font('fonts\\baloo_paj\\Baloo_Paaji_2\\static\\BalooPaaji2-Bold.ttf', 30)
+        print(font_name)
+        
+        # global_font = Font(family=font_name, size=30)
+       
         
         # Adding a menu bar
         # menubar = Menu(self.root)
@@ -49,7 +64,7 @@ class App:
         self.mainframe = tk.Frame(self.root, background='white')
         self.mainframe.pack(fill='both', expand=True)
         
-        self.text = ttk.Label(self.mainframe, text="Hello World", font=('impact', 30), background='white')
+        self.text = ttk.Label(self.mainframe, text="Hello World", font=global_font, background='white')
         self.text.grid(row=2, column=0)
         
        
@@ -57,8 +72,8 @@ class App:
         
         
         # Setting the icon in the top right corner
-        icon_path = 'FirstApplication\\images\\o_morse_logo_rounded.png'
-        icon_path_ico = 'FirstApplication\\images\\o_morse_logo_rounded.ico'
+        icon_path = 'PhysicsSimulation\\images\\o_morse_logo_rounded.png'
+        icon_path_ico = 'PhysicsSimulation\\images\\o_morse_logo_rounded.ico'
         icon = Image.open(icon_path)
         photo = ImageTk.PhotoImage(icon)
         self.root.wm_iconphoto(False, photo)
