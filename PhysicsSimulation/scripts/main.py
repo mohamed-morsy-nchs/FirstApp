@@ -22,6 +22,7 @@ class App:
        
         global_font = pygame.font.Font('fonts\\baloo_paj\\Baloo_Paaji_2\\static\\BalooPaaji2-Bold.ttf', 30)
         print(font_name)
+        print("Issue is TBD. pygame module is not found")
         
         # global_font = Font(family=font_name, size=30)
        
